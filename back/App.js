@@ -22,7 +22,11 @@ require('dotenv').config();
     } catch (error) {
       console.log(error);
     }
- })                                                                                                                                                                                                                  
+ })                                                                                                  
+ 
+ app.get("/", (req, res) =>{
+  res.json('Hello')
+ })
 
 const port = process.env.PORT || 5000;
 
