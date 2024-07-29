@@ -42,6 +42,10 @@ const connectDb = async () => {
       trim: true,
       minlength: 1,
       maxlength: 500
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now
     }
   
   })
