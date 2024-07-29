@@ -12,6 +12,13 @@ require('dotenv').config();
  app.use(express.urlencoded({extended: true}));
  app.use(cors());
 
+ app.use(cors(
+  {
+    origin: [],
+    methods: ["POST", "GET"]
+  }
+ ))
+
  app.post("/", async (req, res) =>{
     const data = req.body
     const newForm = new Form(data)
