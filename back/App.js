@@ -14,7 +14,7 @@ require('dotenv').config();
 
  app.use(cors(
   {
-    origin: ["https://mern-form-frontend.vercel.app"],
+    origin: "https://mern-form-frontend.vercel.app",
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     allowedHeaders: 'Content-Type,Authorization'
