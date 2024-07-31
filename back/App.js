@@ -7,11 +7,6 @@ require('dotenv').config();
 
  connectDb();
 
-
- app.use(express.json());
- app.use(express.urlencoded({extended: true}));
-
-
  app.use(cors(
   {
     origin: "https://mern-form-frontend.vercel.app",
@@ -20,6 +15,9 @@ require('dotenv').config();
     allowedHeaders: 'Content-Type,Authorization'
   }
  ))
+
+ app.use(express.json());
+ app.use(express.urlencoded({extended: true}));
 
  app.post("/", async (req, res) =>{
     const data = req.body
