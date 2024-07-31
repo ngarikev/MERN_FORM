@@ -22,7 +22,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
    try {
-    await axios.post("http://localhost:5000", data);
+    await axios.post("https://mern-form-api-five.vercel.app", data);
     alert('Data sent');
     console.log(data);
    } catch (error) {
